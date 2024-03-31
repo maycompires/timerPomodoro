@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:500");
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 150%;
+    width: 100%;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    background: linear-gradient(120deg, #4caf50, #8bc34a);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#atividade,
+#historico {
+    text-align: center;
+    width: 45vw;
+    height: auto;
+    padding: 20px;
+    background: #27a736;
+    box-shadow: 0px 0px 5px 5px #308933;
+    color: #ffffff;
+    border-radius: 20px;
+    margin: 20px 0px;
+}
+
+.lista-exercicios {
+    list-style: none;
+    text-align: center;
+    }
+
+#atividade > li {
+    
+}
+
+.title {
+    color: black;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 20px;
+    }
+
+.historico,
+li {
+list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    column-fill: balance;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.digital {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #27a736;
+    box-shadow: 0px 0px 5px 5px #308933;
+    color: #ffffff;
+    font-size: 50px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.btnConfig {
+    margin-top: 40px;
+    background-color: transparent;
+    border: none;
+    }
+
+.config {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.config label {
+    margin-right: 3px;
+}
+
+.config input {
+    width: 50px;
+}
+
+.config span {
+    margin-left: 5px;
+}
+
+#cbTempo {
+    border-radius: 5px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+#iniciar,
+#parar,
+#zerar {
+    padding: 16px 42px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.5);
+    line-height: 1.25;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    position: relative;
+    margin-right: 10px;
+    transition: background-color 0.6s ease;
+    width: 200px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#iniciar {
+    background-color: #2ecc40;
+}
+
+#parar {
+    background-color: #ffdc00;
+}
+
+#zerar {
+    background-color: #ff3860;
+}
+
+.exercicio-item {
+    margin-bottom: 20px;
+    line-height: 2.5;
+}
+
+.button {
+    padding: 16px 42px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.5);
+    line-height: 1.25;
+    background: #fc6e51;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    position: relative;
+    margin-right: 10px;
+    transition: background-color 0.6s ease;
+    width: 200px;
+    overflow: hidden;
+}
+
+.concluir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2ecc40;
+    color: white;
+    padding: 15px 32px;
+    height: 32px;
+    font-size: 14px;
+    margin: 4px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    transition-duration: 0.4s;
+}
+
+.concluir:hover {
+    background-color: #45a049;
+}
+
+.button:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    top: var(--mouse-y);
+    left: var(--mouse-x);
+    transform-style: flat;
+    transform: translate3d(-50%, -50%, 0);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    transition: width 0.3s ease, height 0.3s ease;
+    }
+
+.button:focus,
+.button:hover {
+    background: darken(#fc6e51, 7%);
+}
+
+.button:active {
+    &:after {
+    width: 300px;
+    height: 300px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #content {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+
+    #atividade,
+    #historico {
+        width: 90%;
+    }
+
+    .btnConfig {
+        margin-top: 20px;
+    }
+
+    .config input {
+        width: 30px;
+    }
+
+    .button {
+        width: 150px;
+    }
+
+    #buttons {
+        margin-bottom: 1rem;
+    }
+}

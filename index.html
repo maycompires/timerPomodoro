@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Pomodoro</title>
+</head>
+<body onload="pegarExercicios()">
+    <div class="container">
+        <div class="main">
+            <div class="digital">
+                <div class="contador">
+                    <span id="minutos"></span>
+                    <span id="doisponto">:</span>
+                    <span id="segundos"></span>
+                </div>
+                <button class="btnConfig" onclick="configurarTempo()">
+                    <img src="./assets/img/config.png" alt="Botão de configuração" width="25" height="25">
+                </button>
+            </div>
+
+            <div class="config">
+                <label for="tempo">Selecionar o Tempo:</label>
+                <select name="tempo" id="cbTempo" onchange="selecionarTempoPomodoro()">
+                    <option value="05">5 min</option>
+                    <option value="25" selected>25 min</option>
+                    <option value="35">35 min</option>
+                    <option value="45">45 min</option>
+                    <option value="55">55 min</option>
+                </select>
+            </div>
+
+            <div id="buttons">
+                <button class="button" id="iniciar" onclick="iniciarPomodoro()">Iniciar</button>
+                <button class="button" id="parar" onclick="pararPomodoro()">Parar</button>
+                <button class="button" id="zerar" onclick="zerarPomodoro()">Zerar Tempo</button>
+            </div>
+        </div>
+        <div id="content">
+            <div id="atividade">
+                <span class="title">Exercício</span>
+                <ul class="lista-exercicios"></ul>
+            </div>
+            <div id="historico">
+                <span class="title">Atividades Concluídas</span>
+                <ul class="historico"></ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./assets/script.js"></script>
+</body>
+</html>

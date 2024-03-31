@@ -1,4 +1,4 @@
-# Mini Projeto Pomodoro
+# Timer Pomodoro
 
 Um aplicativo de temporizador pomodoro simples com recursos adicionais, como listagem de exercícios e marcação de exercícios concluídos.
 
@@ -21,7 +21,7 @@ Um aplicativo de temporizador pomodoro simples com recursos adicionais, como lis
 
 ## Instalação
 
-1. Clone o repositório: git clone https://github.com/alanamandimifsc/mini-projeto-pomodoro.git
+1. Clone o repositório: 
 2. Abra o arquivo index.html no seu navegador.
 
 ## Como Usar
